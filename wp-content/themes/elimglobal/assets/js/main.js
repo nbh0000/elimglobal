@@ -25,12 +25,41 @@
 		});
 	}
 
-	/* 캡슐 헤더: 스크롤하면 배경을 더 불투명하게 */
+	/* 밝게/어둡게 전환: 기본은 기기 설정, 버튼을 누르면 선택을 저장해 고정 */
+	var themeBtn = $('[data-theme-toggle]');
+	if (themeBtn) {
+		var root = document.documentElement;
+		var mq = window.matchMedia('(prefers-color-scheme: dark)');
+		var current = function () {
+			return root.getAttribute('data-theme') || (mq.matches ? 'dark' : 'light');
+		};
+		var sync = function () {
+			var dark = current() === 'dark';
+			themeBtn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+			themeBtn.setAttribute('aria-label', dark ? '밝은 화면으로 전환' : '어두운 화면으로 전환');
+			themeBtn.title = themeBtn.getAttribute('aria-label');
+		};
+		themeBtn.addEventListener('click', function () {
+			var next = current() === 'dark' ? 'light' : 'dark';
+			root.setAttribute('data-theme', next);
+			try { localStorage.setItem('elim-theme', next); } catch (e) {}
+			sync();
+		});
+		if (mq.addEventListener) mq.addEventListener('change', sync);
+		sync();
+	}
+
+	/* 캡슐 헤더: 페이지 맨 위를 벗어나면 배경을 더 불투명하게
+	   (스크롤 이벤트 대신 맨 위 40px 감시 요소가 화면에서 사라지는지를 본다) */
 	var hd = $('[data-hd]');
-	if (hd && hd.classList.contains('hd--capsule')) {
-		var onScroll = function () { hd.classList.toggle('is-scrolled', window.scrollY > 40); };
-		window.addEventListener('scroll', onScroll, { passive: true });
-		onScroll();
+	if (hd && hd.classList.contains('hd--capsule') && 'IntersectionObserver' in window) {
+		var sentinel = document.createElement('div');
+		sentinel.setAttribute('aria-hidden', 'true');
+		sentinel.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:40px;pointer-events:none;';
+		document.body.prepend(sentinel);
+		new IntersectionObserver(function (entries) {
+			hd.classList.toggle('is-scrolled', !entries[0].isIntersecting);
+		}).observe(sentinel);
 	}
 
 	/* 메인: 화면에 들어올 때 부드럽게 나타나기 */

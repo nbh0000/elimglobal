@@ -6,6 +6,12 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
+	<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+	<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+	<script>
+		/* 저장된 밝게/어둡게 설정을 화면 그리기 전에 적용 (깜빡임 방지) */
+		try { var t = localStorage.getItem('elim-theme'); if (t === 'light' || t === 'dark') { document.documentElement.setAttribute('data-theme', t); } } catch (e) {}
+	</script>
 	<!-- This site is optimized with the Yoast SEO plugin v28.5 - https://yoast.com/product/yoast-seo-wordpress/ -->
 	<title>홈 | (주)엘림글로벌</title>
 	<link rel="canonical" href="https://nbh0000.github.io/elimglobal/" />
@@ -104,8 +110,10 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
 <link rel='stylesheet' id='pretendard-css' href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css' media='all' />
 <link rel='stylesheet' id='elim-logo-font-css' href='https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&#038;display=swap&#038;text=%28%EC%A3%BC%29%EC%97%98%EB%A6%BC%EA%B8%80%EB%A1%9C%EB%B2%8C' media='all' />
-<link rel='stylesheet' id='elim-css' href='https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/css/main.css?ver=1790115446' media='all' />
-<link rel='stylesheet' id='elim-home-css' href='https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/css/home.css?ver=1790115456' media='all' />
+<link rel='stylesheet' id='elim-css' href='https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/css/main.css?ver=1790249760' media='all' />
+<link rel='stylesheet' id='elim-system-css' href='https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/css/system.css?ver=1790288492' media='all' />
+<link rel='stylesheet' id='elim-community-css' href='https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/css/community.css?ver=1790511793' media='all' />
+<link rel='stylesheet' id='elim-home-css' href='https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/css/home.css?ver=1790288320' media='all' />
 </head>
 <body class="home wp-singular page-template-default page page-id-4 wp-embed-responsive wp-theme-elimglobal">
 <a class="skip" href="#main">본문 바로가기</a>
@@ -120,12 +128,12 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 		<div class="wrap hd__inner">
 			<div class="logo">
 				<a href="https://nbh0000.github.io/elimglobal/" rel="home">
-					<span class="logo__text">(주)엘림글로벌</span>				</a>
+					<span class="logo__text" translate="no">(주)엘림글로벌</span>				</a>
 			</div>
 
 			<nav class="gnb" id="gnb" aria-label="주 메뉴" data-gnb>
 				<ul id="menu-%ec%83%81%eb%8b%a8-%eb%a9%94%eb%89%b4" class="gnb__list"><li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-30"><a href="https://nbh0000.github.io/elimglobal/company/">회사소개</a></li>
-<li id="menu-item-31" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-31"><a href="https://nbh0000.github.io/elimglobal/product-category/cole-parmer/">Cole-Parmer</a><button type="button" class="gnb__toggle" aria-expanded="false" aria-label="Cole-Parmer 하위 메뉴"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9l7 7 7-7" /></svg></button>
+<li id="menu-item-31" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-31"><a href="https://nbh0000.github.io/elimglobal/product-category/cole-parmer/">Cole-Parmer</a><button type="button" class="gnb__toggle" aria-expanded="false" aria-label="Cole-Parmer 하위 메뉴"><svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
 <ul class="sub-menu">
 	<li id="menu-item-32" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-32"><a href="https://nbh0000.github.io/elimglobal/product-category/cole-parmer/freezer-mill/">동결분쇄기</a></li>
 	<li id="menu-item-33" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-has-children menu-item-33"><a href="https://nbh0000.github.io/elimglobal/product-category/cole-parmer/homogenizer/">균질화기</a>
@@ -139,7 +147,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li id="menu-item-36" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-36"><a href="https://nbh0000.github.io/elimglobal/product-category/xrf-sample-prep/">XRF 전처리 장비</a></li>
 <li id="menu-item-37" class="menu-item menu-item-type-taxonomy menu-item-object-product_cat menu-item-37"><a href="https://nbh0000.github.io/elimglobal/product-category/sem-tem-sample-prep/">SEM/TEM 전처리 장비</a></li>
 <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-38"><a href="https://nbh0000.github.io/elimglobal/resources/">전문 자료실</a></li>
-<li id="menu-item-39" class="menu-item menu-item-type-post_type_archive menu-item-object-notice menu-item-has-children menu-item-39"><a href="https://nbh0000.github.io/elimglobal/notice/">커뮤니티</a><button type="button" class="gnb__toggle" aria-expanded="false" aria-label="커뮤니티 하위 메뉴"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9l7 7 7-7" /></svg></button>
+<li id="menu-item-39" class="menu-item menu-item-type-post_type_archive menu-item-object-notice menu-item-has-children menu-item-39"><a href="https://nbh0000.github.io/elimglobal/notice/">커뮤니티</a><button type="button" class="gnb__toggle" aria-expanded="false" aria-label="커뮤니티 하위 메뉴"><svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></button>
 <ul class="sub-menu">
 	<li id="menu-item-40" class="menu-item menu-item-type-post_type_archive menu-item-object-notice menu-item-40"><a href="https://nbh0000.github.io/elimglobal/notice/">공지사항</a></li>
 	<li id="menu-item-41" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-41"><a href="https://nbh0000.github.io/elimglobal/faq/">자주 묻는 질문</a></li>
@@ -148,26 +156,32 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <li id="menu-item-42" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-42"><a href="https://nbh0000.github.io/elimglobal/contact/">견적문의</a></li>
 </ul>				<form class="gnb__search gnb__search--m" role="search" method="get" action="https://nbh0000.github.io/elimglobal/">
 					<label class="sr" for="s-m">사이트 검색</label>
-					<input id="s-m" type="search" name="s" placeholder="제품명, 자료 검색" value="">
-					<button type="submit" aria-label="검색"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Zm5.3-2.2L21 21" /></svg></button>
+					<input id="s-m" type="search" name="s" placeholder="제품명, 자료 검색…" value="">
+					<button type="submit" aria-label="검색"><svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></button>
 				</form>
 			</nav>
 
 			<form class="hd__search" role="search" method="get" action="https://nbh0000.github.io/elimglobal/">
 				<label class="sr" for="s-d">사이트 검색</label>
-				<input id="s-d" type="search" name="s" placeholder="제품명, 자료 검색" value="">
-				<button type="submit" aria-label="검색"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Zm5.3-2.2L21 21" /></svg></button>
+				<input id="s-d" type="search" name="s" placeholder="제품명, 자료 검색…" value="">
+				<button type="submit" aria-label="검색"><svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg></button>
 			</form>
 
+			<button type="button" class="theme-toggle" data-theme-toggle aria-label="화면 밝기 전환" title="화면 밝기 전환">
+				<span class="ico-moon"><svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M233.54,142.23a8,8,0,0,0-8-2,88.08,88.08,0,0,1-109.8-109.8,8,8,0,0,0-10-10,104.84,104.84,0,0,0-52.91,37A104,104,0,0,0,136,224a103.09,103.09,0,0,0,62.52-20.88,104.84,104.84,0,0,0,37-52.91A8,8,0,0,0,233.54,142.23ZM188.9,190.34A88,88,0,0,1,65.66,67.11a89,89,0,0,1,31.4-26A106,106,0,0,0,96,56,104.11,104.11,0,0,0,200,160a106,106,0,0,0,14.92-1.06A89,89,0,0,1,188.9,190.34Z"/></svg></span>
+				<span class="ico-sun"><svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm72,88a64,64,0,1,1-64-64A64.07,64.07,0,0,1,192,128Zm-16,0a48,48,0,1,0-48,48A48.05,48.05,0,0,0,176,128ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"/></svg></span>
+			</button>
+
 			<button type="button" class="hd__menu" aria-controls="gnb" aria-expanded="false" data-menu-btn>
-				<span class="sr">메뉴 열기</span><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" /></svg>			</button>
+				<span class="sr">메뉴 열기</span><svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"/></svg>			</button>
 		</div>
 	</div>
 </header>
 
 <main id="main" class="main">
 
-<section class="h-hero" style="--hero:url('https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/img/draft/hero.jpg')">
+<section class="h-hero">
+	<img class="h-hero__img" src="https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/img/draft/hero.jpg" alt="" width="1512" height="602" fetchpriority="high" decoding="async">
 	<div class="h-wrap h-hero__inner">
 		<div class="h-hero__text">
 			<p class="h-eyebrow">SAMPLE PREPARATION SOLUTIONS</p>
@@ -175,46 +189,53 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 (주)엘림글로벌</h1>
 			<p class="h-hero__desc">Cole-Parmer 장비, XRF 전처리 장비, SEM/TEM 전처리 장비를 공급하고 설치·교육·유지보수까지 지원합니다.</p>
 			<div class="h-hero__actions">
-				<a class="h-btn h-btn--dark" href="https://nbh0000.github.io/elimglobal/products/">제품 보기 <svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
-				<a class="h-btn h-btn--glass" href="https://nbh0000.github.io/elimglobal/contact/">견적문의</a>
+				<a class="h-btn h-btn--dark" href="https://nbh0000.github.io/elimglobal/products/">제품 보기 <svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
+				<a class="h-btn h-btn--line" href="https://nbh0000.github.io/elimglobal/contact/">견적문의</a>
 			</div>
 		</div>
-
-					<nav class="h-cats" aria-label="제품군 바로가기">
-									<a class="h-cat" href="https://nbh0000.github.io/elimglobal/product-category/cole-parmer/">
-						<span class="h-cat__num">01</span>
-						<span class="h-cat__name">Cole-Parmer 장비</span>
-						<span class="h-cat__go"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-					</a>
-									<a class="h-cat" href="https://nbh0000.github.io/elimglobal/product-category/xrf-sample-prep/">
-						<span class="h-cat__num">02</span>
-						<span class="h-cat__name">XRF 전처리 장비</span>
-						<span class="h-cat__go"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-					</a>
-									<a class="h-cat" href="https://nbh0000.github.io/elimglobal/product-category/sem-tem-sample-prep/">
-						<span class="h-cat__num">03</span>
-						<span class="h-cat__name">SEM/TEM 전처리 장비</span>
-						<span class="h-cat__go"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-					</a>
-							</nav>
-			</div>
+	</div>
 </section>
 
-	<section class="h-sec">
+	<section class="h-sec h-lines" aria-labelledby="h-lines-title">
 		<div class="h-wrap">
-			<header class="h-head" data-reveal>
+			<h2 class="h-title" id="h-lines-title">제품군</h2>
+			<p class="h-lead">분석 목적과 시료에 맞춰 세 가지 제품군을 공급합니다.</p>
+			<div class="h-bento">
+									<a class="h-tile h-tile--lg" href="https://nbh0000.github.io/elimglobal/product-category/cole-parmer/" data-reveal>
+						<img width="364" height="319" src="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-1.jpg" class="h-tile__img" alt="극저온 동결분쇄기" loading="lazy" decoding="async" srcset="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-1.jpg 364w, https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-1-300x263.jpg 300w" sizes="auto, (max-width: 364px) 100vw, 364px" />						<span class="h-tile__body">
+							<span class="h-tile__name">Cole-Parmer 장비</span>
+															<span class="h-tile__desc">Cole-Parmer의 바이오 시료 전처리 장비. 동결분쇄기와 균질화기로 조직·식물·고분자 시료를 분석 가능한 상태로 만듭니다.</span>
+														<span class="h-tile__meta">제품 4종 <svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+						</span>
+					</a>
+									<a class="h-tile" href="https://nbh0000.github.io/elimglobal/product-category/xrf-sample-prep/" data-reveal>
+						<img width="364" height="319" src="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-4.jpg" class="h-tile__img" alt="자동 퓨전 비드 제조기" loading="lazy" decoding="async" srcset="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-4.jpg 364w, https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-4-300x263.jpg 300w" sizes="auto, (max-width: 364px) 100vw, 364px" />						<span class="h-tile__body">
+							<span class="h-tile__name">XRF 전처리 장비</span>
+														<span class="h-tile__meta">제품 2종 <svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+						</span>
+					</a>
+									<a class="h-tile" href="https://nbh0000.github.io/elimglobal/product-category/sem-tem-sample-prep/" data-reveal>
+						<img width="208" height="139" src="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/product-1.jpg" class="h-tile__img" alt="스퍼터 코터" loading="lazy" decoding="async" />						<span class="h-tile__body">
+							<span class="h-tile__name">SEM/TEM 전처리 장비</span>
+														<span class="h-tile__meta">제품 2종 <svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></span>
+						</span>
+					</a>
+							</div>
+		</div>
+	</section>
+
+	<section class="h-sec h-sec--soft h-featured" aria-labelledby="h-featured-title">
+		<div class="h-wrap">
+			<div class="h-head">
 				<div>
-					<p class="h-eyebrow h-eyebrow--accent">PRODUCTS</p>
-					<h2 class="h-title">주요 제품</h2>
+					<h2 class="h-title" id="h-featured-title">주요 제품</h2>
+					<p class="h-lead">가격은 사양과 수량에 따라 견적으로 안내합니다.</p>
 				</div>
-				<div class="h-head__side">
-					<p class="h-head__desc">분석 목적과 시료에 맞는 전처리 장비를 제품군별로 소개합니다.</p>
-					<div class="h-head__ctrl">
-						<button type="button" class="h-arrow" data-slide="prev" aria-label="이전 제품"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7" /></svg></button>
-						<button type="button" class="h-arrow" data-slide="next" aria-label="다음 제품"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7" /></svg></button>
-					</div>
+				<div class="h-head__ctrl">
+					<button type="button" class="h-arrow" data-slide="prev" aria-label="이전 제품"><svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/></svg></button>
+					<button type="button" class="h-arrow" data-slide="next" aria-label="다음 제품"><svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/></svg></button>
 				</div>
-			</header>
+			</div>
 
 			<div class="h-slider" data-slider>
 				<ul class="h-slider__track" data-track>
@@ -223,8 +244,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 								<div class="h-card__img"><img width="364" height="319" src="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-1.jpg" class="attachment-elim-card size-elim-card wp-post-image" alt="극저온 동결분쇄기" decoding="async" fetchpriority="high" srcset="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-1.jpg 364w, https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-1-300x263.jpg 300w" sizes="(max-width: 364px) 100vw, 364px" /></div>
 								<div class="h-card__body">
 									<p class="h-card__cat">Cole-Parmer 장비</p>									<h3 class="h-card__name">극저온 동결분쇄기</h3>
-									<p class="h-card__model">Freezer/Mill Type</p>									<span class="h-card__go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-								</div>
+									<p class="h-card__model">Freezer/Mill Type</p>								</div>
 							</a>
 						</li>
 												<li class="h-slider__item">
@@ -232,8 +252,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 								<div class="h-card__img"><img width="364" height="319" src="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-2.jpg" class="attachment-elim-card size-elim-card wp-post-image" alt="고속 균질화기" decoding="async" srcset="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-2.jpg 364w, https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-2-300x263.jpg 300w" sizes="(max-width: 364px) 100vw, 364px" /></div>
 								<div class="h-card__body">
 									<p class="h-card__cat">Cole-Parmer 장비</p>									<h3 class="h-card__name">고속 균질화기</h3>
-									<p class="h-card__model">HG Series</p>									<span class="h-card__go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-								</div>
+									<p class="h-card__model">HG Series</p>								</div>
 							</a>
 						</li>
 												<li class="h-slider__item">
@@ -241,8 +260,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 								<div class="h-card__img"><img width="364" height="319" src="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-3.jpg" class="attachment-elim-card size-elim-card wp-post-image" alt="비드밀 균질화기" decoding="async" srcset="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-3.jpg 364w, https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-3-300x263.jpg 300w" sizes="(max-width: 364px) 100vw, 364px" /></div>
 								<div class="h-card__body">
 									<p class="h-card__cat">Cole-Parmer 장비</p>									<h3 class="h-card__name">비드밀 균질화기</h3>
-									<p class="h-card__model">BM Series</p>									<span class="h-card__go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-								</div>
+									<p class="h-card__model">BM Series</p>								</div>
 							</a>
 						</li>
 												<li class="h-slider__item">
@@ -250,8 +268,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 								<div class="h-card__img"><img width="364" height="319" src="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-4.jpg" class="attachment-elim-card size-elim-card wp-post-image" alt="자동 퓨전 비드 제조기" decoding="async" srcset="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-4.jpg 364w, https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/slide-4-300x263.jpg 300w" sizes="(max-width: 364px) 100vw, 364px" /></div>
 								<div class="h-card__body">
 									<p class="h-card__cat">XRF 전처리 장비</p>									<h3 class="h-card__name">자동 퓨전 비드 제조기</h3>
-									<p class="h-card__model">Fusion Bead</p>									<span class="h-card__go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-								</div>
+									<p class="h-card__model">Fusion Bead</p>								</div>
 							</a>
 						</li>
 												<li class="h-slider__item">
@@ -259,88 +276,66 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 								<div class="h-card__img"><img width="208" height="139" src="https://nbh0000.github.io/elimglobal/wp-content/uploads/2026/09/product-1.jpg" class="attachment-elim-card size-elim-card wp-post-image" alt="스퍼터 코터" decoding="async" /></div>
 								<div class="h-card__body">
 									<p class="h-card__cat">SEM/TEM 전처리 장비</p>									<h3 class="h-card__name">스퍼터 코터</h3>
-									<p class="h-card__model">Sputter Coater</p>									<span class="h-card__go" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-								</div>
+									<p class="h-card__model">Sputter Coater</p>								</div>
 							</a>
 						</li>
 										</ul>
 			</div>
 
-			<p class="h-more"><a class="h-btn h-btn--line" href="https://nbh0000.github.io/elimglobal/products/">전체 제품 보기 <svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a></p>
+			<p class="h-more"><a class="h-link" href="https://nbh0000.github.io/elimglobal/products/">전체 제품 <svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a></p>
 		</div>
 	</section>
 
-<section class="h-sec h-sec--soft">
-	<div class="h-wrap h-about">
+<section class="h-sec h-about" aria-labelledby="h-about-title">
+	<div class="h-wrap h-about__grid">
 		<div class="h-about__text" data-reveal>
-			<p class="h-eyebrow h-eyebrow--accent">ABOUT</p>
-			<h2 class="h-title">분석 결과는 전처리에서 시작됩니다</h2>
-			<p class="h-about__desc">(주)엘림글로벌은 연구소·대학·산업 현장의 분석 목적에 맞는 전처리 장비를 선정하고, 도입 이후의 운영까지 함께합니다.</p>
+			<h2 class="h-title" id="h-about-title">분석 결과는 전처리에서 시작됩니다</h2>
+			<p class="h-lead">(주)엘림글로벌은 연구소·대학·산업 현장의 분석 목적에 맞는 전처리 장비를 선정하고, 도입 이후의 운영까지 함께합니다.</p>
 			<dl class="h-facts">
 									<div><dt>2004</dt><dd>설립</dd></div>
 								<div><dt>3</dt><dd>전문 제품군</dd></div>
-				<div><dt>1:1</dt><dd>맞춤 견적 상담</dd></div>
+				<div><dt>1:1</dt><dd>맞춤 견적</dd></div>
 			</dl>
-			<a class="h-btn h-btn--dark" href="https://nbh0000.github.io/elimglobal/company/">회사소개 <svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+			<a class="h-link" href="https://nbh0000.github.io/elimglobal/company/">회사소개 <svg class="ico" viewBox="0 0 256 256" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></svg></a>
 		</div>
 		<div class="h-about__media" data-reveal>
 			<div class="h-video">	<div class="yt">
 		<img class="yt__poster" src="https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/img/draft/video-poster.jpg" alt="(주)엘림글로벌 전시 영상" loading="lazy" width="1280" height="722">
-		<span class="yt__play" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg></span>
 			</div>
 </div>
 		</div>
 	</div>
-
-	<div class="h-wrap h-tiles">
-		<a class="h-tile h-tile--earth" href="https://nbh0000.github.io/elimglobal/company/#location" data-reveal>
-			<span class="h-tile__icon"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" /></svg></span>
-			<span class="h-tile__body">
-				<span class="h-tile__label">오시는 길</span>
-				<span class="h-tile__text">서울특별시 강서구 마곡서로152, B 912호(두산더랜드타워)</span>
-			</span>
-			<span class="h-tile__go"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-		</a>
-		<a class="h-tile h-tile--navy" href="https://nbh0000.github.io/elimglobal/contact/" data-reveal>
-			<span class="h-tile__icon"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5h18v14H3z M3 6l9 7 9-7" /></svg></span>
-			<span class="h-tile__body">
-				<span class="h-tile__label">장비 도입 · 견적 문의</span>
-				<span class="h-tile__text">제품별 사양과 견적을 1:1로 안내합니다.</span>
-			</span>
-			<span class="h-tile__go"><svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
-		</a>
-	</div>
 </section>
 
-<section class="h-sec h-sec--quick">
-	<div class="h-wrap">
-		<div class="h-quick" id="quick" data-reveal>
-			<div class="h-quick__text">
-				<p class="h-eyebrow h-eyebrow--light">CONSULTING</p>
-				<h2 class="h-quick__title">장비 도입 상담</h2>
-				<p class="h-quick__desc">성함과 연락처를 남기면<br />
+<section class="h-cta" id="quick" aria-labelledby="h-cta-title">
+	<div class="h-wrap h-cta__grid">
+		<div class="h-cta__text">
+			<h2 class="h-cta__title" id="h-cta-title">장비 도입 상담</h2>
+			<p class="h-cta__desc">성함과 연락처를 남기면<br />
 담당자가 확인 후 연락드립니다.</p>
+					</div>
+		<form class="h-cta__form" method="post" action="https://nbh0000.github.io/elimglobal/wp-admin/admin-post.php">
+			<input type="hidden" id="elim_nonce" name="elim_nonce" value="58fbf311cf" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" name="action" value="elim_inquiry"><input type="hidden" name="form_type" value="quick"><input type="hidden" name="ts" value="1790513672"><input type="hidden" name="back" value="https://nbh0000.github.io/elimglobal/"><div class="hp" aria-hidden="true"><label>웹사이트<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>						<div class="h-field">
+				<label for="q-name">성함</label>
+				<input id="q-name" type="text" name="name" required autocomplete="name" value="">
 			</div>
-			<form class="h-quick__form" method="post" action="https://nbh0000.github.io/elimglobal/wp-admin/admin-post.php">
-				<input type="hidden" id="elim_nonce" name="elim_nonce" value="39fb8291a6" /><input type="hidden" name="_wp_http_referer" value="/" /><input type="hidden" name="action" value="elim_inquiry"><input type="hidden" name="form_type" value="quick"><input type="hidden" name="ts" value="1790236336"><input type="hidden" name="back" value="https://nbh0000.github.io/elimglobal/"><div class="hp" aria-hidden="true"><label>웹사이트<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>								<div class="h-quick__fields">
-					<label class="sr" for="q-name">성함</label>
-					<input id="q-name" type="text" name="name" placeholder="성함 *" required autocomplete="name" value="">
-					<label class="sr" for="q-phone">연락처</label>
-					<input id="q-phone" type="tel" name="phone" placeholder="연락처 *" required autocomplete="tel" inputmode="tel" value="">
-					<button type="submit" class="h-btn h-btn--white">상담신청 <svg class="ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></button>
-				</div>
-				<div class="h-quick__agree">
-					<label><input type="checkbox" name="agree" value="1" required> 개인정보 수집·이용 동의 (필수)</label>
-					<details>
-						<summary>내용 보기</summary>
-						<p>1. 수집 항목: 업체명, 담당자명, 연락처, 이메일, 문의 내용<br />
+			<div class="h-field">
+				<label for="q-phone">연락처</label>
+				<input id="q-phone" type="tel" name="phone" required autocomplete="tel" inputmode="tel" placeholder="예: 010-1234-5678…" value="">
+			</div>
+			<button type="submit" class="h-btn h-btn--white">견적문의</button>
+			<div class="h-cta__agree">
+				<label><input type="checkbox" name="agree" value="1" required> 개인정보 수집·이용 동의 (필수)</label>
+				<details>
+					<summary>내용 보기</summary>
+					<p>1. 수집 항목: 업체명, 담당자명, 연락처, 이메일, 문의 내용<br />
 2. 수집 목적: 견적 및 상담 문의에 대한 답변<br />
 3. 보유 기간: 문의 처리 완료 후 1년 (관계 법령에 따라 보존이 필요한 경우 해당 기간)<br />
 4. 동의를 거부할 수 있으며, 거부 시 문의 접수가 제한됩니다.</p>
-					</details>
-				</div>
-			</form>
-		</div>
+				</details>
+			</div>
+			<p class="h-cta__more">제품 사양과 수량까지 함께 보내려면 <a href="https://nbh0000.github.io/elimglobal/contact/">견적문의 페이지</a>를 이용하면 됩니다.</p>
+		</form>
 	</div>
 </section>
 
@@ -373,7 +368,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <script type="speculationrules">
 {"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/elimglobal/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
 </script>
-<script data-wp-strategy="defer" defer id="elim-js" src="https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/js/main.js?ver=1790115297"></script>
+<script data-wp-strategy="defer" defer id="elim-js" src="https://nbh0000.github.io/elimglobal/wp-content/themes/elimglobal/assets/js/main.js?ver=1790238714"></script>
 <script src="https://nbh0000.github.io/elimglobal/static-preview.js" defer></script>
 </body>
 </html>

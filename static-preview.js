@@ -2,6 +2,7 @@
  * GitHub Pages 미리보기용 보정 스크립트 (정적 사이트에는 PHP가 없음)
  * - 견적문의: ?product_id= 로 들어오면 제품 선택·제목 자동 입력
  * - FAQ: 분류 탭(?cat=)과 검색(?q=)을 브라우저에서 처리
+ * - 커뮤니티 게시판: 검색(?q=)과 세미나 예정/지난(?when=)을 브라우저에서 처리
  * - 문의 전송·사이트 검색: 미리보기에서는 동작하지 않는다는 안내 표시
  */
 (function () {
@@ -84,6 +85,44 @@
 			p.className = 'empty';
 			p.textContent = '등록된 질문이 없습니다.';
 			faq.appendChild(p);
+		}
+	}
+
+	/* 커뮤니티 게시판 목록: 검색(?q=)과 세미나 예정/지난(?when=)을 브라우저에서 거른다 */
+	var boardRows = document.querySelectorAll('.sec--board .board tbody tr');
+	if (boardRows.length && !faqItems.length) {
+		var bq = (params.get('q') || '').trim().toLowerCase();
+		var when = params.get('when') || '';
+		var titles = { upcoming: '예정 세미나', past: '지난 세미나' };
+		var visible = 0;
+		boardRows.forEach(function (tr) {
+			if (tr.querySelector('.empty')) return;
+			var okQ = !bq || tr.textContent.toLowerCase().indexOf(bq) !== -1;
+			var state = tr.querySelector('.state');
+			var okW = !when || !state || (when === 'past') === state.classList.contains('state--done');
+			tr.hidden = !(okQ && okW);
+			if (!tr.hidden) visible++;
+		});
+		if (titles[when]) {
+			var h = document.querySelector('.board-title');
+			if (h) h.textContent = titles[when];
+			document.querySelectorAll('.side__group a').forEach(function (a) {
+				var aw = new URL(a.href).searchParams.get('when') || '';
+				if (a.closest('.side__group').querySelector('summary.is-active')) {
+					if (aw === when) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+				}
+			});
+		}
+		var bInput = document.querySelector('.sec--board input[name="q"]');
+		if (bInput) bInput.value = params.get('q') || '';
+		if (!visible) {
+			var tbody = document.querySelector('.sec--board .board tbody');
+			if (tbody && !tbody.querySelector('.empty')) {
+				var tr = document.createElement('tr');
+				var cols = document.querySelectorAll('.sec--board .board thead th').length || 1;
+				tr.innerHTML = '<td colspan="' + cols + '" class="empty">검색 결과가 없습니다.</td>';
+				tbody.appendChild(tr);
+			}
 		}
 	}
 })();
