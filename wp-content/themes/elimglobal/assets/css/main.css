@@ -108,6 +108,15 @@ ul, ol { margin: 0; padding: 0; }
 .logo { margin: 0; flex: none; }
 .logo a { display: flex; align-items: center; color: var(--ink); }
 .logo img { max-height: 44px; width: auto; }
+.ft__logo img { display: block; width: auto; height: 60px; }
+/* 로고 글자가 검정이라 다크 모드에서는 흰 글자 로고로 바꿔 끼운다 */
+.logo-on-dark { display: none !important; }
+:root[data-theme="dark"] .logo-on-light { display: none !important; }
+:root[data-theme="dark"] .logo-on-dark { display: block !important; }
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) .logo-on-light { display: none !important; }
+	:root:not([data-theme="light"]) .logo-on-dark { display: block !important; }
+}
 .logo__text { font-family: "Nanum Myeongjo", "Batang", serif; font-size: 26px; font-weight: 700; letter-spacing: -0.03em; }
 
 .gnb { flex: 1; }
